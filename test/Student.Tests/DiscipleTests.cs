@@ -9,7 +9,7 @@ public class DiscipleTests
     public void Test1()
     {
         // arrange
-        var stud = new Disciple("Michal");
+        var stud = new Disciple("Michal", "Kowalski");
         stud.AddGrade(15);
         stud.AddGrade(20);
         stud.AddGrade(30);

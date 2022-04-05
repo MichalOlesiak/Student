@@ -5,20 +5,23 @@ namespace StudentApp
     public class Disciple
     {
         private string name;
+        private string surename;
 
         private List<double> grades = new List<double>();
 
-        public Disciple(string name)
+        public Disciple(string name, string surename)
         {
             this.name = name;
+            this.surename = surename;
         }
 
-        public string Name { 
+        public string FullName 
+        { 
             get
-            {
-                return this.name;
-            } 
-            }
+                {
+                    return this.name + " "+ this.surename;
+                } 
+        }
         public void AddGrade(double grade)
         {
             this.grades.Add(grade);
