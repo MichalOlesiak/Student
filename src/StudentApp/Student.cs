@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 
 namespace StudentApp
@@ -13,6 +12,13 @@ namespace StudentApp
         {
             this.name = name;
         }
+
+        public string Name { 
+            get
+            {
+                return this.name;
+            } 
+            }
         public void AddGrade(double grade)
         {
             this.grades.Add(grade);
