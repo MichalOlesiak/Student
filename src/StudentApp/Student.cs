@@ -4,20 +4,17 @@ namespace StudentApp
 {
     public class Disciple
     {
-        private string Name;
-        private string Surename;
+        private string name;
+        private string surename;
 
         private List<double> grades = new List<double>();
 
         public Disciple(string name, string surename)
         {
-            this.Name = name;
-            this.Surename = surename;
+            this.FullName = name + " " + surename;
         }
 
-        public string FullName { get{
-            return this.Name + " " + Surename;
-        } set{} }
+        public string FullName { get; set;}
         public void AddGrade(string grade)
         {
             int result;
