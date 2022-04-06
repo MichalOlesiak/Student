@@ -6,13 +6,13 @@ namespace Student.Tests;
 public class DiscipleTests
 {
     [Fact]
-    public void Test1()
+    public void AreDataCorrectAndCalculateProperly()
     {
         // arrange
         var stud = new Disciple("Michal", "Kowalski");
-        stud.AddGrade(15);
-        stud.AddGrade(20);
-        stud.AddGrade(30);
+        stud.AddGrade("15");
+        stud.AddGrade("20");
+        stud.AddGrade("30");
 
         // act
         var result = stud.GetStatistics();

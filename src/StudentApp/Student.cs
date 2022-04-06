@@ -4,27 +4,28 @@ namespace StudentApp
 {
     public class Disciple
     {
-        private string name;
-        private string surename;
+        private string Name;
+        private string Surename;
 
         private List<double> grades = new List<double>();
 
         public Disciple(string name, string surename)
         {
-            this.name = name;
-            this.surename = surename;
+            this.Name = name;
+            this.Surename = surename;
         }
 
-        public string FullName 
-        { 
-            get
-                {
-                    return this.name + " "+ this.surename;
-                } 
-        }
-        public void AddGrade(double grade)
+        public string FullName { get{
+            return this.Name + " " + Surename;
+        } set{} }
+        public void AddGrade(string grade)
         {
-            this.grades.Add(grade);
+            int result;
+            if (int.TryParse(grade, out result))
+            {
+                this.grades.Add(result);
+            }
+            
         }
 
         public Statistics GetStatistics()
